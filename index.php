@@ -1,7 +1,7 @@
 <?php
 ob_start();
-define('API_KEY','token');
-$admin = "159887854";
+define('API_KEY','267666272:AAH7VOrUfvmI3j7zkF0rQgzywZ04dj1Onyc');
+$admin = "200546170";
 function bot($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
     $ch = curl_init();
@@ -53,10 +53,10 @@ if (isset($update->edited_message)){
     'reply_markup'=>json_encode([
       'inline_keyboard'=>[
         [
-          ['text'=>'alireza_PT','url'=>'https://telegram.me/alireza_PT']
+          ['text'=>'amir hossein','url'=>'https://telegram.me/veryg0odebot']
         ],
         [
-          ['text'=>'CreateBOT','url'=>'https://telegram.me/create_antispam_bot']
+          ['text'=>'TeleSpeed','url'=>'https://telegram.me/TeleSpeedTg']
         ]
       ]
     ])
@@ -73,7 +73,7 @@ if (isset($update->edited_message)){
 }elseif(isset($update->message-> new_chat_member )){
 bot('sendMessage',[
       'chat_id'=>$chat_id,
-      'text'=>"به گروه خوش آمدید "
+      'text'=>"سلام✋\nمن اومدم جاسوسی😎\nجاسوسیه کسانی که پیام شونو ادیت میکنند تاکسی نفهمه😱\nبه نفعته ادیت نکنی من لوت میدم"
     ]);
 }
   
