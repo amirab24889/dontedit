@@ -30,9 +30,10 @@ if (isset($update->edited_message)){
   $eid = $editm->message_id;
   $edname = $editm->from->first_name;
   $jsu = json_decode(file_get_contents(__DIR__.'/users/'.$eid.'.json'));
-  $text = "<b>".$edname."</b>\nمن دیدم که چی گفتی بازم ادیت کنی میفهمم
-  گفتی:
-".$jsu;
+  $text = "<code>خبر مهم خبر میخام یکی رو لو بدم</code>
+  "<b>".$edname."/b"
+  <code>این عاغاعه این پیامو ادیت زده قبلش نوشته بود"</code>"
+"<code>".$jsu."</code>"";
   $id = $update->edited_message->chat->id;
   bot('sendmessage',[
     'chat_id'=>$id,
@@ -45,7 +46,7 @@ if (isset($update->edited_message)){
   //$up = file_get_contents(__DIR__.'/users/'.$eid.'.json');
   //str_replace("edited_message","message",$up);
 }elseif(preg_match('/^\/([Ss]tart)/',$text1)){
-  $text = "به ربات ادیت نکن\nخوش آمدید\nبرای اد کردن من به گروه بر روی لینک زیر بزنید\nhttps://telegram.me/edit_nakonbot?startgroup=new";
+  $text = "به ربات ادیت نکن\nخوش آمدید\nبرای اد کردن من به گروه بر روی لینک زیر بزنید";
   bot('sendmessage',[
     'chat_id'=>$chat_id,
     'text'=>$text,
@@ -53,7 +54,13 @@ if (isset($update->edited_message)){
     'reply_markup'=>json_encode([
       'inline_keyboard'=>[
         [
-          ['text'=>'amir hossein','url'=>'https://telegram.me/veryg0odebot']
+          ['text'=>'برای اد کردن تو گروه کیلیک کن','url'=>'https://telegram.me/edit_nakonbot?startgroup=new']
+        ],
+         ['text'=>'سازندگان','url'=>'https://telegram.me/TeleSpeedTG']
+        ],
+        ['text'=>'امیرحسین','url'=>'https://telegram.me/veryg0odebot']
+        ],
+        ['text'=>'محمد','url'=>'https://telegram.me/POKER_SOFT']
         ],
         [
           ['text'=>'TeleSpeed','url'=>'https://telegram.me/TeleSpeedTg']
