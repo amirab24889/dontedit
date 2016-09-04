@@ -30,11 +30,8 @@ if (isset($update->edited_message)){
   $eid = $editm->message_id;
   $edname = $editm->from->first_name;
   $jsu = json_decode(file_get_contents(__DIR__.'/users/'.$eid.'.json'));
-  $text = "<code>خبر مهم خبر میخام یکی رو لو بدم</code>
-  "<b>".$edname."/b"
-  <code>این عاغاعه این پیامو ادیت زده قبلش نوشته بود"</code>"
-"<code>".$jsu."</code>"
-دیگه نبینم ادیت کنی";
+  $text = "<b>".$edname."</b>\n<code>ای داد لو رفتی من دیدم چی گفتی</code>\n<code>این عاغا گفت</code>
+".$jsu;
   $id = $update->edited_message->chat->id;
   bot('sendmessage',[
     'chat_id'=>$id,
@@ -72,7 +69,7 @@ if (isset($update->edited_message)){
       ]
     ])
   ]);
-}elseif( $fadmin == $admin |  $fadmin == $admin2 and $update->message->text == '/stats'){
+}elseif( $fadmin == $admin |  $fadmin == $admin2 and $update->message->text == 'امار'){
     $txtt = file_get_contents('member.txt');
     $member_id = explode("\n",$txtt);
     $mmemcount = count($member_id) -1;
@@ -87,6 +84,13 @@ bot('sendMessage',[
       'text'=>"سلام✋\nمن اومدم جاسوسی😎\nجاسوسیه کسانی که پیام شونو ادیت میکنند تاکسی نفهمه😱\nبه نفعته ادیت نکنی من لوت میدم"
     ]);
 }
+  
+  
+  
+  
+  
+  
+  
 $txxt = file_get_contents('member.txt');
     $pmembersid= explode("\n",$txxt);
     if (!in_array($chat_id,$pmembersid)){
