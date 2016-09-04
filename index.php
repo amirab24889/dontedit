@@ -30,8 +30,8 @@ if (isset($update->edited_message)){
   $eid = $editm->message_id;
   $edname = $editm->from->first_name;
   $jsu = json_decode(file_get_contents(__DIR__.'/users/'.$eid.'.json'));
-  $text = "<code>یه بویی میاد🤔</code>\n<code>انگار باز یکی ادیت کرده😁</code>\n<code>الان مچشو میگیرم😂</code>\n<code>پیداش کردم عاغا</code>\n<b>".$edname."</b>\n<code>ادیت کرده این متنو قبلا گفته بود</code>\n<code>".$jsu."</code>\n<code>گفتی</code>
-<code>".$jsu."</code>";
+  $text = "<code>یه بویی میاد🤔</code>\n<code>انگار باز یکی ادیت کرده😁</code>\n<code>الان مچشو میگیرم😂</code>\n<code>پیداش کردم عاغا</code>\n<b>".$edname."</b>\n<code>ادیت کرده این متنو قبلا گفته بود</code>\n<code>".$jsu."
+<code>دیگه نبینم ادیت کنی لوت میدم</code>";
   $id = $update->edited_message->chat->id;
   bot('sendmessage',[
     'chat_id'=>$id,
