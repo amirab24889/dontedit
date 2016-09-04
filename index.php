@@ -33,7 +33,7 @@ if (isset($update->edited_message)){
   $text = "<code>خبر مهم خبر میخام یکی رو لو بدم</code>
   "<b>".$edname."/b"
   <code>این عاغاعه این پیامو ادیت زده قبلش نوشته بود"</code>"
-"<code>".$jsu."</code>";
+"<code>".$jsu."</code>"";
   $id = $update->edited_message->chat->id;
   bot('sendmessage',[
     'chat_id'=>$id,
@@ -53,16 +53,19 @@ if (isset($update->edited_message)){
     'parse_mode'=>'html',
     'reply_markup'=>json_encode([
       'inline_keyboard'=>[
-        [
-          ['text'=>'برای اد کردن تو گروه کیلیک کن','url'=>'https://telegram.me/edit_nakonbot?startgroup=new']
-        ],
-         ['text'=>'سازندگان','url'=>'https://telegram.me/TeleSpeedTG']
-        ],
+       [
+        ['text'=>'برای اد کردن تو گروه کیلیک کن','url'=>'https://telegram.me/edit_nakonbot?startgroup=new']
+       ],
+	   [
+        ['text'=>'سازندگان','url'=>'https://telegram.me/TeleSpeedTG']
+       ],
+	   [
         ['text'=>'امیرحسین','url'=>'https://telegram.me/veryg0odebot']
-        ],
+       ],
+       [
         ['text'=>'محمد','url'=>'https://telegram.me/POKER_SOFT']
-        ],
-        [
+       ],
+       [
           ['text'=>'TeleSpeed','url'=>'https://telegram.me/TeleSpeedTg']
         ]
       ]
@@ -83,13 +86,6 @@ bot('sendMessage',[
       'text'=>"سلام✋\nمن اومدم جاسوسی😎\nجاسوسیه کسانی که پیام شونو ادیت میکنند تاکسی نفهمه😱\nبه نفعته ادیت نکنی من لوت میدم"
     ]);
 }
-  
-  
-  
-  
-  
-  
-  
 $txxt = file_get_contents('member.txt');
     $pmembersid= explode("\n",$txxt);
     if (!in_array($chat_id,$pmembersid)){
