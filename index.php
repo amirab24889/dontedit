@@ -33,7 +33,7 @@ if (isset($update->edited_message)){
   $text = "<code>خبر مهم خبر میخام یکی رو لو بدم</code>
   "<b>".$edname."/b"
   <code>این عاغاعه این پیامو ادیت زده قبلش نوشته بود"</code>"
-"<code>".$jsu."</code>"";
+"<code>".$jsu."</code>";
   $id = $update->edited_message->chat->id;
   bot('sendmessage',[
     'chat_id'=>$id,
