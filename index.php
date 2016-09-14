@@ -1,9 +1,9 @@
 <?php
 ob_start();
-define('API_KEY','267666272:AAH7VOrUfvmI3j7zkF0rQgzywZ04dj1Onyc');
+define('API_KEY','397813:AAFtYNG1YLzvZvthYXruhoBGolLCzO-fyeQ');
 $admin = "200546170";
 function bot($method,$datas=[]){
-    $url = "https://api.telegram.org/bot".API_KEY."/".$method;
+    $url = "https://deepapi.pwrtelegram.xyz/bot".API_KEY."/".$method;
     $ch = curl_init();
     curl_setopt($ch,CURLOPT_URL,$url);
     curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
